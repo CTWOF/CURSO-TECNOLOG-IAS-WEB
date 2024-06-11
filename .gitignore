@@ -1,3 +1,4 @@
 /secret
 .notas
 .prettierrc
+.node_modules
