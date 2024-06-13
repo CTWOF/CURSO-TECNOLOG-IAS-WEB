@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Embeds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+             <h1>Explorando el Majestuoso Monte Everest</h1>
+             <audio id="miAudio" controls>
+                <source src="./assets/audiolong.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio></div>
+
+    <div class="grid-container">
+        
+    
+        <div class="grid-item">
+            <h3>Un Viaje Visual</h3>
+            <video src="./assets/everestclouds.mp4" controls></video>
+            <figcaption>usando &lt;video&gt;</figcaption>
+        </div>
+        <div class="grid-item">
+            <h3> Explora el Everest</h3>
+            <embed src="./assets/everestMP$.mp4">
+            <figcaption>usando &lt;embed&gt;</figcaption>
+        </div> 
+        <div class="grid-item">
+            <h3>Documental</h3>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/nZmO8B9rRik" frameborder="0" allowfullscreen></iframe>
+            <figcaption>usando &lt;iframe&gt;</figcaption>
+        </div>
+
+        <div class="grid-item">
+            <h3>Día Mundial de las Montañas</h3>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 100%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAGIBH4vU_c/cUVVN3vYbu4DPwDUIwLzlw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            </div>
+            <a href="https://www.canva.com/design/DAGIBH4vU_c/cUVVN3vYbu4DPwDUIwLzlw/view?utm_content=DAGIBH4vU_c&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">December 11</a> de Oksana Fedyukova
+            <figcaption>Presentación de Canvausando &lt;iframe&gt;</figcaption>
+        </div>
+
+
+        <div class="grid-item">
+            <h3>Everest 1996</h3>
+            <object data="./assets/everestbook.pdf" type="application/pdf" class="pdf-object">
+                <p>Texto alternativo si el PDF no se puede mostrar.</p>
+            </object>
+            <figcaption>usando &lt;object&gt;</figcaption>
+        </div>
+        
+       
+        
+        
+        <div class="grid-item">
+            <h3>Gráficos Vectoriales</h3>
+            <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path d="M0 145L64 109L129 163L193 85L257 97L321 169L386 211L450 217L514 145L579 187L643 97L707 211L771 193L836 229L900 199L900 0L836 0L771 0L707 0L643 0L579 0L514 0L450 0L386 0L321 0L257 0L193 0L129 0L64 0L0 0Z" fill="#00cc8e"></path>
+                <path d="M0 253L64 193L129 253L193 133L257 205L321 253L386 283L450 331L514 199L579 277L643 205L707 259L771 259L836 271L900 265L900 197L836 227L771 191L707 209L643 95L579 185L514 143L450 215L386 209L321 167L257 95L193 83L129 161L64 107L0 143Z" fill="#00a379"></path>
+                <path d="M0 325L64 271L129 331L193 223L257 277L321 331L386 355L450 367L514 283L579 313L643 265L707 325L771 325L836 319L900 301L900 263L836 269L771 257L707 257L643 203L579 275L514 197L450 329L386 281L321 251L257 203L193 131L129 251L64 191L0 251Z" fill="#007c62"></path>
+                <path d="M0 379L64 397L129 415L193 349L257 397L321 475L386 469L450 421L514 361L579 379L643 325L707 451L771 439L836 499L900 379L900 299L836 317L771 323L707 323L643 263L579 311L514 281L450 365L386 353L321 329L257 275L193 221L129 329L64 269L0 323Z" fill="#005749"></path>
+                <path d="M0 601L64 601L129 601L193 601L257 601L321 601L386 601L450 601L514 601L579 601L643 601L707 601L771 601L836 601L900 601L900 377L836 497L771 437L707 449L643 323L579 377L514 359L450 419L386 467L321 473L257 395L193 347L129 413L64 395L0 377Z" fill="#00342e"></path>
+            </svg>
+            <figcaption>usando &lt;svg&gt;</figcaption>
+        </div>
+
+        <div class="grid-item">
+            <h3>Dibuja en el Canvas</h3>
+            <canvas id="miCanvas" width="500" height="500"></canvas>
+            <br>
+            <button id="resetButton">Reiniciar</button> 
+            <legend for="colorPicker">colorPicker</legend>
+            <input type="color" id="colorPicker" value="#088341">
+            <figcaption>Dibuja en el canvas usando el ratón (usando &lt;canvas&gt;)</figcaption>
+        </div>
+        <div class="grid-item">
+            <h3>La Grandeza del Everest</h3>
+            <img src="./assets/everestavif.avif" alt="Imagen del Monte Everest">
+            <figcaption>usando &lt;img&gt;</figcaption>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+   
+    
+    </body>

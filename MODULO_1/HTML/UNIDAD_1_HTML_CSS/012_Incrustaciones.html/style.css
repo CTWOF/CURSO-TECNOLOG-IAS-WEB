@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #dfede683;
 }
 
 .grid-container {
@@ -10,7 +11,7 @@ body {
 }
 
 .grid-item {
-    border: 1px solid #ccc;
+    border: 1px solid #eeefed;
     padding: 10px;
     text-align: center;
 }
@@ -25,4 +26,40 @@ body {
 .grid-item svg {
     max-width: 100%;
     height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+.pdf-object {
+    width: 100%;
+    height: 80vh; 
+    border: 1px solid #ccc; 
+    overflow: auto; 
+}
+button {
+    background-color: #088341;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 50%;
+}
+button:hover {
+    background-color: #dcd0da;
+    color: #088341;
+    font-weight: 600;
+}
+#miAudio {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+#colorPicker {
+    width: 40px; 
+    height: 40px; 
 }
