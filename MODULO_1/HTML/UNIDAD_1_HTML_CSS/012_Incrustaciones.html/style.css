@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-item img,
+.grid-item video,
+.grid-item audio,
+.grid-item iframe,
+.grid-item embed,
+.grid-item object,
+.grid-item canvas,
+.grid-item svg {
+    max-width: 100%;
+    height: auto;
+}

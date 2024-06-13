@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Información Personal</title>
+   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de Información Personal</h1>
+    <form>
+        <fieldset>
+            <legend>Información Personal</legend>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required><br><br>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required><br><br>
+            
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            <br><br>
+            
+            <div>
+                <label>Género:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino" required>
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="otro" name="genero" value="otro" required>
+                <label for="otro">Otro</label>
+            </div>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Información de Contacto</legend>
+            
+            <label for="email">Dirección de Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="email@google.com" required><br><br>
+            
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required><br><br>
+            
+            <label for="direccion">Dirección:</label><br>
+            <textarea id="direccion" name="direccion" placeholder="Ingrese su dirección" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <div>  
+            <input type="submit" value="Enviar">
+            <input type="button" value="Cancelar"> 
+        </div>
+    </form>
+    
+</body>
+</html>
