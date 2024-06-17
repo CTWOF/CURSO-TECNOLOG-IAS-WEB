@@ -6,33 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Tabla con Colspan y Rowspan</title>
     <style>
+        body{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+    
+        main{
+            background-color: antiquewhite;
+
+        }
+        main h1,
+        main h2 {
+            text-align:left;
+            font-size: 24px; 
+            color: #336699; 
+            margin-bottom: 20px;
+                    }
+        .container {
+            max-width: 800px;
+            margin: 15px auto;
+            padding: 20px;
+            box-shadow:4px 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
+        }
         p {
             font-family: Arial, sans-serif;
             font-size: 16px;
             line-height: 1.5;
         }
-
-        main h1, h2 {
-            color: #336699;
-        }
-
-           a {
+        a {
             text-decoration: none;
             color: #CC3300;
         }
 
-        #lista ul, h2    {
+        #lista ul,
+        h2 {
             list-style-type: square;
             color: black;
         }
 
-        .destacado
-            {
-            font-weight:700;
+        .destacado {
+            font-weight: 700;
         }
 
-        button 
-            {
+        button {
             background-color: #FF9900;
             color: #fff;
             border: none;
@@ -49,14 +68,15 @@
 </head>
 
 <body>
-    <main>
+    <main  class="container">
         <h1>Encabezado Principal</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nibh at felis.</p>
         <h2>Subtítulo</h2>
         <p>Phasellus eu velit sed lorem sodales egestas. Ut feugiat. <a href="#">Donec porttitor</a>, magna eu varius
-            luctus.</p>
+            luctus.</p> 
     </main>
-    <div id="lista">
+    
+    <div class="container" id="lista">
         <h2>Lista de elementos destacados</h2>
         <ul class="destacado">
             <li>Elemento 1</li>
@@ -64,7 +84,10 @@
             <li>Elemento 3</li>
         </ul>
     </div>
-    <button>Registrarse</button>
+    <div class="container">  
+           <button >Registrarse</button>
+</div>
+</main>
 </body>
 
 </html>
