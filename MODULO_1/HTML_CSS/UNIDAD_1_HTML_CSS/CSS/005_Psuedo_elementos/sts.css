@@ -1,0 +1,34 @@
+.btn{
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: #626bb2;
+    color: #f0f0f0;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+.btn::first-letter{
+color:rgb(0, 255, 85);
+}
+.btn:hover::before{
+    background-color: rgb(204, 247, 124);
+    content: "HAZ CLICK -->";
+    
+}
+.btn:hover::first-letter{
+    color: rgb(247, 245, 244);
+}
+.btn:focus::after{
+    content: " VISITED!!!!";
+    color: white;
+}
+.btn:focus::after::first-letter{
+    content: " VISITED!!!!";
+    color: white;
+
+}

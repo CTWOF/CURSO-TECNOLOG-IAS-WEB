@@ -14,10 +14,11 @@
     border: 2px solid white;
     color: white;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border-radius: 7px;
 }
 
 .btn-corrigeme::first-letter {
@@ -33,15 +34,12 @@
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
     width: 200px;
-}
-
-.btn-corrigeme::before {
     content: "¡Haz click!";
     color: yellow;
-    visibility: hidden;
 }
+
+
 
 .btn-corrigeme:hover::before {
     opacity: 1;
@@ -71,26 +69,6 @@
 }
 .btn-corrigeme:hover::after,
 .btn-corrigeme:focus::before {
-    display: none;
-    background-color: transparent;
-
-}
-/* visited */
-.btn-corrigeme:visited::after {
-    content: "Visited";
-    color: white;
-    opacity:inherit;
-    visibility: visible;
-    padding: 50px;
-}
-
-.btn-corrigeme:visited {
-    color: transparent;
-}
-.btn-corrigeme:visited::first-letter {
-    color: transparent;
-}
-.btn-corrigeme:visited::before {
     display: none;
     background-color: transparent;
 
