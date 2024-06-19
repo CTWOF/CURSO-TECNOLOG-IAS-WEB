@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    text-align: center; 
+    text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -11,42 +11,87 @@
 
 .btn-corrigeme {
     background-color: #15bed4;
-    border: 2px solid rgb(232, 226, 226);
+    border: 2px solid white;
     color: white;
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 7px;
-    padding: 10px;
-    border: solid;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-corrigeme::first-letter {
     color: #075c67;
 }
 
+.btn-corrigeme::before,
+.btn-corrigeme::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+    width: 200px;
+}
 
-.btn-corrigeme:hover {
-    background-color: white;
-    color:white;
-
+.btn-corrigeme::before {
+    content: "¡Haz click!";
+    color: yellow;
+    visibility: hidden;
 }
 
 .btn-corrigeme:hover::before {
-    content: "¡Haz click!";
-    color: yellow;
-    background-color: #15bed4;
-    border-radius: 7px;
-    padding: 10px;
-    border: solid;
+    opacity: 1;
+    visibility: visible;
 }
 
-.btn-corrigeme:focus {
-    outline: none;
-    color: white;
+.btn-corrigeme:hover {
+    color: transparent;
+}
+.btn-corrigeme:hover::first-letter {
+    color: transparent;
 }
 
 .btn-corrigeme:focus::after {
-    content: " Ya has visitado este recurso";
-    color: #e8e408;
+    content: "Visited";
+    color: white;
+    opacity:inherit;
+    visibility: visible;
+    padding: 50px;
+}
+
+.btn-corrigeme:focus {
+    color: transparent;
+}
+.btn-corrigeme:focus::first-letter {
+    color: transparent;
+}
+.btn-corrigeme:hover::after,
+.btn-corrigeme:focus::before {
+    display: none;
+    background-color: transparent;
+
+}
+/* visited */
+.btn-corrigeme:visited::after {
+    content: "Visited";
+    color: white;
+    opacity:inherit;
+    visibility: visible;
+    padding: 50px;
+}
+
+.btn-corrigeme:visited {
+    color: transparent;
+}
+.btn-corrigeme:visited::first-letter {
+    color: transparent;
+}
+.btn-corrigeme:visited::before {
+    display: none;
+    background-color: transparent;
+
 }
