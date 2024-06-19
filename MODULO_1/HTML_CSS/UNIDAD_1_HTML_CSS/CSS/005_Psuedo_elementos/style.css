@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn-corrigeme {
+    background-color: #15bed4;
+    border: 2px solid rgb(232, 226, 226);
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 10px;
+    border: solid;
+}
+
+.btn-corrigeme::first-letter {
+    color: #075c67;
+}
+
+
+.btn-corrigeme:hover {
+    background-color: white;
+    color:white;
+
+}
+
+.btn-corrigeme:hover::before {
+    content: "¡Haz click!";
+    color: yellow;
+    background-color: #15bed4;
+    border-radius: 7px;
+    padding: 10px;
+    border: solid;
+}
+
+.btn-corrigeme:focus {
+    outline: none;
+    color: white;
+}
+
+.btn-corrigeme:focus::after {
+    content: " Ya has visitado este recurso";
+    color: #e8e408;
+}
