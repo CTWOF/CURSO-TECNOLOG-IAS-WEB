@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+/* Reset básico */
+body, h1, p, button {
+    margin: 0;
+    padding: 20px;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+}
+
+/* Contenedor flex */
+.profile-card {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Imagen de perfil */
+.profile-image img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    width:110px;
+    border:solid #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Información del perfil */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.profile-description {
+    color: rgb(100, 100, 100);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.profile-button {
+    background-color: hsl(220, 90%, 56%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.profile-button:hover {
+    background-color: hsl(220, 90%, 46%);
+}
+
+/* Media Queries */
+
+/* Móviles (Vertical) */
+@media (max-width: 480px) {
+    .profile-card {
+        background-color: #ff6b6b; /* Rojo */
+    }
+    .profile-name {
+        font-size: 1.2rem;
+    }
+    .profile-description {
+        font-size: 0.8rem;
+    }
+    .profile-button {
+        background-color: #4ecdc4; /* Turquesa */
+    }
+}
+
+/* Móviles (Horizontal) */
+@media ( 481px <= width <= 767px) {
+
+/* @media (min-width: 481px) and (max-width: 767px) {
+ */    .profile-card {
+        background-color: #4ecdc4; /* Turquesa */
+        flex-direction: row;
+        text-align: left;
+    }
+    .profile-image {
+        margin-right: 1rem;
+    }
+    .profile-info {
+        align-items: flex-start;
+    }
+    .profile-button {
+        background-color: #ffe66d;
+        color: #1a535c; /* Amarillo */
+    }
+}
+
+/* Tabletas (Vertical) */
+@media (768px <= width <= 1024px) {
+    .profile-card {
+        background-color: #ffe66d; /* Amarillo */
+    }
+    .profile-name {
+        font-size: 2rem;
+    }
+    .profile-description {
+        font-size: 1.2rem;
+    }
+    .profile-button {
+        background-color: #ff6b6b; /* Rojo */
+    }
+}
+
+/* Tabletas (Horizontal) */
+@media ( 1025px <= width <= 1279px) {
+    .profile-card {
+        background-color: #1a535c; /* Azul oscuro */
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        color: aliceblue;
+    }
+    .profile-image {
+        margin-right: 2rem;
+    }
+    .profile-name {
+        color: #ebe3e3;}
+    .profile-info, .profile-description {
+        align-items: flex-start;
+        color: aliceblue;
+    }
+    .profile-button {
+        background-color: #ff6b6b; /* Rojo */
+    }
+}
+
+/* Desktops */
+@media ( 1280px <= width <= 1919px) {
+    .profile-card {
+        background: rgb(2,0,36);
+        background: linear-gradient(45deg, rgb(16, 167, 218) 0%, rgb(74, 74, 184) 35%, rgba(0,212,255,1) 100%);        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-name {
+        font-size: 2.5rem;
+    }
+    .profile-description {
+        font-size: 1.5rem;
+    }
+    .profile-button {
+        background-color: #ffe66d; 
+        color: #1a535c;/* Amarillo */
+    }
+}
+
+/* Desktops Muy Grandes */
+@media (min-width: 1920px) {
+    .profile-card {
+        background-color: #ffe66d; /* Amarillo */
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+    .profile-image {
+        margin-right: 2rem;
+    }
+    .profile-info {
+        align-items: flex-start;
+    }
+    .profile-button {
+        background-color: #1a535c; /* Azul oscuro */
+    }
+}
+
+/* Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-card {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .profile-button {
+        border: 2px solid #fff;
+    }
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:25vh;
+    z-index: -1;
+}
+
+
+.area{
+    background: #4e54c833;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

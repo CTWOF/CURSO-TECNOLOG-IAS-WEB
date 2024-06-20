@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(68, 68, 80);
+}
+.galeria{
+float: left;  
+    padding: 2%;
+    width: 100%;
+}
+img{
+    width: 33%;
+    min-width: 280px;
+    height: auto;
+}
