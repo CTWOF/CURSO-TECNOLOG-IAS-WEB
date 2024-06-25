@@ -86,7 +86,7 @@ aside {
     color: aliceblue;
     background-color: #d9bcd9b8;
     padding: 10px;
-    width: 100vw;
+    width: 99vw;
 }
 .social-container{
     
@@ -199,44 +199,59 @@ button[type="submit"]:hover {
 
 .team {
     display: grid;
-    gap: 20px;
+    gap: 8px;
 }
 
 .profile-card {
-width: 300px;   
+width: 250px;   
 border-radius: 7px;
  background-color: #f0f0f0;
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
     font-size: 1.2em;
+    
 }
+.team img {
+    border-radius: 50%;
+    width: 150px;
+    border: 5px solid #DE3163;}
 
 @media (min-width: 1200px) {
-    .grid-container {
-        grid-template-columns: repeat(6, 1fr);
+    .team {
+        grid-template-columns: repeat(4, 1fr);
     }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .grid-container {
-        grid-template-columns: repeat(4, 1fr);
+    .team {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 600px) and (max-width: 991px) {
-    .grid-container {
+    .team {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .profile-card {
+        width: 300px; 
+        margin-left: 10px;
     }
 }
 
 @media (max-width: 599px) {
-    .grid-container {
+    .team {
         grid-template-columns: 1fr;
     }
+    
+.profile-card {
+    width: 300px; 
+    margin-left: 30px;
 }
 
 
+}
 .btnContact {
     background-color: var(--elm);
     color: white;
