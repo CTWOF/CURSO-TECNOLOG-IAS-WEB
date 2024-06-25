@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(68, 68, 80);
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    width: 100%;
+}
+
+.galeria img {
+    flex: 1 1 25%;
+    min-width: 280px;
+    height: auto;
+    margin: 1%; 
+}
