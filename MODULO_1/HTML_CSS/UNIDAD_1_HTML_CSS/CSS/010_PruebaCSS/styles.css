@@ -1,0 +1,312 @@
+:root {
+    --cerise-red: #DE3163;
+    --mauvelous: #EF98AA;
+    --dawn-pink: #F4E1E6;
+    --bermuda: #7DD8C6;
+    --elm: #1C7C7D;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--elm);
+
+}
+main {
+    display: flex;
+    justify-content: space-between;
+   margin-left: 25px;
+}  
+a{   
+    text-decoration: none;
+    font-weight: bold;
+}
+header {
+    background-color:var(--mauvelous);
+    color: white;
+    
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--mauvelous);
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 7px;
+    margin: 0;
+    background-color:var(--elm);
+    height: 30px;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+#logo {
+ margin-left: 20px;    
+  }
+
+
+div {
+width: 85vw;
+padding: 15px;
+
+}
+section {
+    flex: 1;
+    margin-right: 10px;
+}
+
+
+article {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+aside {
+    color: aliceblue;
+    background-color: #d9bcd9b8;
+    padding: 10px;
+    width: 30vw;
+    
+}
+.social {
+    color: aliceblue;
+    background-color: #d9bcd9b8;
+    padding: 10px;
+    width: 100vw;
+}
+.social-container{
+    
+        display: flex; 
+        justify-content: space-around;
+        gap: 10px; 
+      }
+       .social-container img {
+        width: 32px; 
+        height: 32px; 
+      }
+    
+
+dt a{
+    color: rgb(203, 210, 208);
+}
+img{
+    align-items: center;
+}
+footer {
+    background-color:var(--cerise-red);
+    color:#d0cdd3;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+}
+
+footer a {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 5px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.icon-container {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px; 
+  }
+  
+  .icon-container img {
+    width: 32px; 
+    height: 32px; 
+  }
+
+
+
+.birthday-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.birthday-article img {
+    margin-right: 20px; 
+}
+
+.birthday-article .content {
+    flex: 1; 
+}
+
+
+.form-group {
+    margin: 0 0 0 20px;
+    margin-bottom: 15px;
+    width: 70vw;
+    border-radius: 8px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: var(--elm);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+
+button[type="submit"]:hover {
+    background-color: var(--bermuda);
+    color: #2c2727;
+    
+}
+
+.team {
+    display: grid;
+    gap: 20px;
+}
+
+.profile-card {
+width: 300px;   
+border-radius: 7px;
+ background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 599px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.btnContact {
+    background-color: var(--elm);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+
+.btnContact:hover {
+    background-color: var(--bermuda);
+    color: #2c2727;
+    
+}
+
+@media (max-width: 768px) {
+   
+    .birthday-article {
+        flex-direction: column; 
+    }
+
+    .birthday-article img {
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
+        border-radius: 7px;
+    }
+}
+@media (max-width: 768px) {
+
+    #menu-icon {
+      display: block; 
+      font-size: 40px;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 2; 
+    }
+  }
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+          align-items: center;
+        }
+      
+      h1 {
+          font-size: 18px; 
+          margin-top: 10px; 
+          display: none;
+    
+        }
+      }
+      @media (max-width: 768px) {
+        aside {
+            display:none
+        }
+      }
+      @media (min-width: 768px) {
+     .social-container{
+            display:none
+        }
+      }
+      @media (max-width:768px){
+        main div { width: 100vw; }
+       
+
+      }
+

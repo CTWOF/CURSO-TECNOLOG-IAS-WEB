@@ -1,3 +1,12 @@
+:root {
+    --cerise-red: #DE3163;
+    --mauvelous: #EF98AA;
+    --dawn-pink: #F4E1E6;
+    --bermuda: #7DD8C6;
+    --elm: #1C7C7D;
+  }
+  
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +18,7 @@ a{
 
 }
 header {
-    background-color: #4a4e4d;
+    background-color:var(--elm);
     color: white;
     text-align: center;
 }

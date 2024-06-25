@@ -3953,9 +3953,8 @@ input, select, textarea {
     position: absolute;
     bottom: 0; 
     left: 90%;
-
     transform: translateX(-50%);
-    z-index: 1000; 
+    z-index: 2; 
 }
 	#footer {
 		color: #717981;
