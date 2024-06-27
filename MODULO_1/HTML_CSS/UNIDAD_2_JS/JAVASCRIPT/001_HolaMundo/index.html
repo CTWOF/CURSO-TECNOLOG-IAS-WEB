@@ -42,17 +42,18 @@ button:hover {
 }</style>
 
 <body>
-    <button  id='hola' onclick="hola()">HOLA</button>
-    <button  id='adios' >ADIOS</button>
+    <button  id='hola' onclick="hola()" onmouseleave="boton">HOLA</button>
 
      
 
     <script>
         const hola = () =>  alert("HOLA MUNDO");
 
-        let adios = document.querySelector('#adios');
-        adios.addEventListener('mouseleave', () => alert('ADIOS'));
-       adios.innerHTML="BYE BYE";
+        let boton = document.querySelector('#hola');
+        boton.addEventListener('mouseleave', () => {
+            alert('ADIOS'); 
+            boton.innerHTML = "BYE BYE"}
+            );
 
     </script>
 </body>
