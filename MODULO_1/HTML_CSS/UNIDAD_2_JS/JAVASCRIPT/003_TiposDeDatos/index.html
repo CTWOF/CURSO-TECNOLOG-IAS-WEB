@@ -14,6 +14,7 @@
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -39,55 +40,88 @@ button:hover {
     background-color: #80e551;
     
     color: #fff;
-}</style>
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 2px solid rgb(238, 231, 231);
+    padding: 8px;
+    text-align: left;
+}
+</style>
 
 <body>
-     <h1 id="hello">Tipos de Datos en JS</h1>
+    <header>  
+          <h1>Tipos de Datos en JS</h1>
+          <br>
+    <hr>
+</header>
+    <main>  
+    <div>   
+        <table id="result">
+        <thead>
+            <tr>
+                <th>Nombre de la Variable</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table></div>
+  
+</main>
     <script>
         var numeroEntero = 5;
         var numeroDecimal = 3.14;
         var numeroNegativo = -10;
         
-        console.log("Número Entero:", numeroEntero);
-        console.log("Número Decimal:", numeroDecimal);
-        console.log("Número Negativo:", numeroNegativo);
-        
-        // String: Representa datos de texto
         var saludo = 'Hola';
         var despedida = "Mundo";
         
-        console.log("Saludo:", saludo);
-        console.log("Despedida:", despedida);
-        
-        // Boolean: Representa un valor lógico (true o false)
         var esVerdadero = true;
         var esFalso = false;
         
-        console.log("Es Verdadero:",  typeof esVerdadero);
-        console.log("Es Falso:", esFalso);
-        
-        // Null: Representa la ausencia intencional de cualquier valor
         var valorNulo = null;
         
-        console.log("Valor Nulo:", typeof valorNulo);
-        
-        // Undefined: Representa un valor no definido
         var valorNoDefinido;
         
-        console.log("Valor No Definido:",typeof valorNoDefinido);
-        
-        // Tipos No Primitivos
-        // Array
-        var arr = ["pera", "manzana", "Plátano"] ;
+        var arr = ["pera", "manzana", "Plátano"];
         arr.push('orange');
-        console.log("tipoARR: ", typeof arr, arr);
 
-        // Objeto
-        var obj = {"nombre":"Pepe", "apellido":"García"}
+        var obj = {"nombre": "Pepe", "apellido": "García"};
         obj.edad = 30;
         obj.nombre = "Oksana";
-        console.log("tipoOBJ: ",  typeof obj, obj);
-        
+
+        var variables = [
+            { nombre: 'numeroEntero', tipo: typeof numeroEntero, valor: numeroEntero },
+            { nombre: 'numeroDecimal', tipo: typeof numeroDecimal, valor: numeroDecimal },
+            { nombre: 'numeroNegativo', tipo: typeof numeroNegativo, valor: numeroNegativo },
+            { nombre: 'saludo', tipo: typeof saludo, valor: saludo },
+            { nombre: 'despedida', tipo: typeof despedida, valor: despedida },
+            { nombre: 'esVerdadero', tipo: typeof esVerdadero, valor: esVerdadero },
+            { nombre: 'esFalso', tipo: typeof esFalso, valor: esFalso },
+            { nombre: 'valorNulo', tipo: typeof valorNulo, valor: valorNulo },
+            { nombre: 'valorNoDefinido', tipo: typeof valorNoDefinido, valor: valorNoDefinido },
+            { nombre: 'arr', tipo: typeof arr, valor: JSON.stringify(arr) },
+            { nombre: 'obj', tipo: typeof obj, valor: JSON.stringify(obj) }
+        ];
+
+        var tbody = document.querySelector('#result tbody');
+
+        variables.forEach(function(variable) {
+            var row = `<tr>
+                          <td>${variable.nombre}</td>
+                          <td>${variable.tipo}</td>
+                          <td>${variable.valor}</td>
+                       </tr>`;
+            tbody.innerHTML += row;
+        });
     </script>
 </body>
+
+
 </html>
