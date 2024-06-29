@@ -6,5 +6,6 @@ document.querySelector('#start').addEventListener('click', ()=>{
 
  const ageDog = document.querySelector('#dog');
   
- ageDog.innerHTML = `Si el edad de tu canina  es ${dog} entonces  la edad suya en años humanos  sera${person}`
+ ageDog.innerHTML = `Si el edad de tu canina  es ${dog}
+  entonces  la edad suya en años humanos  sera${person}`
 })

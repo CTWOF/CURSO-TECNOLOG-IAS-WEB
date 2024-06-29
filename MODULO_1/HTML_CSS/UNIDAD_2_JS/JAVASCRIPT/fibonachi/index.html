@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Spiral</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fibonacciCanvas" width="600" height="600"></canvas>
+
+  <script>
+    function generateFibonacciSequence(maxValue) {
+      let fibSequence = [1, 1];
+      let i = 2;
+      while (true) {
+        let nextFib = fibSequence[i - 1] + fibSequence[i - 2];
+        if (nextFib > maxValue) break;
+        fibSequence.push(nextFib);
+        i++;
+      }
+      return fibSequence;
+    }
+
+    function drawFibonacciSpiral(canvasId, maxValue) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      const fibSequence = generateFibonacciSequence(maxValue);
+
+      let centerX = canvas.width / 2;
+      let centerY = canvas.height / 2;
+      let angle = 0;
+      let scale = 5;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.font = "16px Arial";
+
+      for (let i = 0; i < fibSequence.length; i++) {
+        let num = fibSequence[i];
+        let radius = scale * Math.sqrt(num);
+        let posX = centerX + radius * Math.cos(angle);
+        let posY = centerY + radius * Math.sin(angle);
+
+        ctx.fillText(num, posX, posY);
+
+        // Update angle for the next number
+        angle += Math.PI * (3 - Math.sqrt(5));
+      }
+    }
+
+    // Call the function to draw Fibonacci spiral up to 15
+    drawFibonacciSpiral('fibonacciCanvas', 15);
+  </script>
+</body>
+</html>
