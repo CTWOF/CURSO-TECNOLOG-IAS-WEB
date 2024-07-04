@@ -15,22 +15,38 @@
       deletePlate(id) {
           if (confirm(`Are you sure you want to delete plate with ID ${id}?`)) {
               this.plates = this.plates.filter(plate => plate.id !== id);
+              this.menu = this.menu.filter(plate => plate.id !== id);
+              this.ofert = this.ofert.filter(plate => plate.id !== id);
               this.renderPlates();
+              this.renderMenu();
+              this.renderOfert();
               alert(`Deleted plate with ID ${id}`);
           }
       }
 
       editPlate(id, newTitle, newDescription, newPrice) {
-          const plate = this.plates.find(plate => plate.id === id);
-          if (plate) {
+          const updatePlate = (plate) => {
               plate.title = newTitle;
               plate.description = newDescription;
               plate.price = newPrice;
+          };
+
+          const plate = this.plates.find(plate => plate.id === id);
+          if (plate) {
+              updatePlate(plate);
               this.renderPlates();
+          }
+
+          const menuPlate = this.menu.find(plate => plate.id === id);
+          if (menuPlate) {
+              updatePlate(menuPlate);
               this.renderMenu();
+          }
+
+          const ofertPlate = this.ofert.find(plate => plate.id === id);
+          if (ofertPlate) {
+              updatePlate(ofertPlate);
               this.renderOfert();
-
-
           }
       }
 
@@ -173,4 +189,3 @@
       const selectedIds = Array.from(document.querySelectorAll('#tBodyOfert input[type="checkbox"]:checked')).map(checkbox => parseInt(checkbox.value));
       plates.deleteFromOfert(selectedIds);
   });
-
