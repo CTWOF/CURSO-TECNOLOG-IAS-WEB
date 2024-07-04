@@ -13,8 +13,11 @@
       }
 
       deletePlate(id) {
-          this.plates = this.plates.filter(plate => plate.id !== id);
-          this.renderPlates();
+          if (confirm(`Are you sure you want to delete plate with ID ${id}?`)) {
+              this.plates = this.plates.filter(plate => plate.id !== id);
+              this.renderPlates();
+              alert(`Deleted plate with ID ${id}`);
+          }
       }
 
       editPlate(id, newTitle, newDescription, newPrice) {
@@ -24,6 +27,10 @@
               plate.description = newDescription;
               plate.price = newPrice;
               this.renderPlates();
+              this.renderMenu();
+              this.renderOfert();
+
+
           }
       }
 
@@ -38,8 +45,10 @@
       }
 
       deleteFromMenu(id) {
-          this.menu = this.menu.filter(plate => plate.id !== id);
-          this.renderMenu();
+          if (confirm("Are you sure you want to delete this plate from the menu?")) {
+              this.menu = this.menu.filter(plate => plate.id !== id);
+              this.renderMenu();
+          }
       }
 
       addToOfert(ids) {
@@ -53,8 +62,10 @@
       }
 
       deleteFromOfert(ids) {
-          this.ofert = this.ofert.filter(plate => !ids.includes(plate.id));
-          this.renderOfert();
+          if (confirm("Are you sure you want to delete the selected plates from the ofert?")) {
+              this.ofert = this.ofert.filter(plate => !ids.includes(plate.id));
+              this.renderOfert();
+          }
       }
 
       renderPlates() {
@@ -137,23 +148,16 @@
       e.target.reset();
   });
 
-  document.getElementById('plates-link').addEventListener('click', () => {
-      document.getElementById('plates-section').style.display = 'block';
-      document.getElementById('menu-section').style.display = 'none';
-      document.getElementById('ofert-section').style.display = 'none';
-  });
+  const switchSection = (section) => {
+      const sections = ['plates-section', 'menu-section', 'ofert-section'];
+      sections.forEach(sec => {
+          document.getElementById(sec).style.display = sec === section ? 'block' : 'none';
+      });
+  };
 
-  document.getElementById('menu-link').addEventListener('click', () => {
-      document.getElementById('plates-section').style.display = 'none';
-      document.getElementById('menu-section').style.display = 'block';
-      document.getElementById('ofert-section').style.display = 'none';
-  });
-
-  document.getElementById('ofert-link').addEventListener('click', () => {
-      document.getElementById('plates-section').style.display = 'none';
-      document.getElementById('menu-section').style.display = 'none';
-      document.getElementById('ofert-section').style.display = 'block';
-  });
+  document.getElementById('plates-link').addEventListener('click', () => switchSection('plates-section'));
+  document.getElementById('menu-link').addEventListener('click', () => switchSection('menu-section'));
+  document.getElementById('ofert-link').addEventListener('click', () => switchSection('ofert-section'));
 
   document.getElementById('add-to-menu-btn').addEventListener('click', () => {
       const selectedIds = Array.from(document.querySelectorAll('#tBodyPlates input[type="checkbox"]:checked')).map(checkbox => parseInt(checkbox.value));
@@ -169,3 +173,4 @@
       const selectedIds = Array.from(document.querySelectorAll('#tBodyOfert input[type="checkbox"]:checked')).map(checkbox => parseInt(checkbox.value));
       plates.deleteFromOfert(selectedIds);
   });
+
