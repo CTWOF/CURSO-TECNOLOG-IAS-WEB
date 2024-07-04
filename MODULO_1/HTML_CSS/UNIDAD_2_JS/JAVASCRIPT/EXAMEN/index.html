@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="plates-link">Plates</a></li>
+                <li><a href="#" id="menu-link">Menu</a></li>
+                <li><a href="#" id="ofert-link">Ofert</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+
+        <section id="plates-section">
+            <h2>Add New Plate</h2>
+            <form id="add-plate-form">
+                <input type="text" id="plate-title" placeholder="Plate Title" required>
+                <input id="plate-description" placeholder="Plate Description" required>
+                <input type="number" id="plate-price" placeholder="Plate Price" required>
+                <button type="submit">Add Plate</button>
+            </form>
+        
+            <h2>Plates</h2>
+            <table id="tablePlates">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyPlates">
+                    <!-- Table rows will be inserted dynamically -->
+                </tbody>
+            </table>
+            <button id="add-to-menu-btn">Add Selected to Menu</button>
+        </section>
+        
+
+        <section id="menu-section" style="display:none;">
+            <h2>Menu</h2>
+            <table id="tableMenu">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Actions</th> <!-- here should be opcion to delete from table but not from tablePlate only from this table and opcion to add to Ofert one o few ids -->
+                    </tr>
+                </thead>
+                <tbody id="tBodyMenu">
+                    <!-- Table rows will be inserted dynamically -->
+                </tbody>
+            </table>
+            <button id="add-to-ofert-btn">Add Selected to Ofert</button>
+        </section>
+
+        <section id="ofert-section" style="display:none;">
+            <h2>Ofert</h2>
+            <table id="tableOfert">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyOfert">
+                    <!-- Table rows will be inserted dynamically -->
+                </tbody>
+            </table>
+            <button id="delete-from-ofert-btn">Delete Selected from Ofert</button>
+        </section>
+        
+    </main>
+
+    <footer>&copy; 2024 Created with &#128151; by Oksana</footer>
+    <script src="main.js"></script>
+</body>
+</html>

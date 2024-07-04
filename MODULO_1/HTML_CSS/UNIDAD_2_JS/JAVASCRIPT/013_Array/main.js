@@ -25,7 +25,7 @@ function addCity() {
 function deleteCity() {
   const index = parseInt(deleteNameInput.value, 10) - 1;
   if (!Number.isNaN(index) && index >= 0 && index < cities.length) {
-    cities.splice(index, 1);
+    cities.splice(index, 1); 
     updateList();
   } else {
     alert('Invalid number.');
