@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>015_JS_Objects</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <h2 id="carta"> </h2>
+
+
+
+    <script>
+        let persona = {
+            nombre: "Juan",
+            apellido: "Nadie",
+            edad: 50,
+            ojosColor:
+            {
+                izquierdo: "Verde",
+                derecho: "Azul"
+            },
+            altura: 1.80
+        }
+        //hecho destruction of object
+        function msgSaludo({ nombre, apellido, edad, altura, ojosColor: { izquierdo, derecho } }) {
+            const msg = `Hola ${nombre} ${apellido}, 
+            <br>
+            tu edad es de ${edad} años y mides ${altura} m. 
+           <br>Eres como Bowie porque tienes el ojo izquierdo ${izquierdo} 
+           y el derecho ${derecho}.
+           <br> Bienvenido!!`
+            document.getElementById('carta').innerHTML = msg;
+        }
+        msgSaludo(persona);
+
+
+    </script>
+</body>
+
+</html>
