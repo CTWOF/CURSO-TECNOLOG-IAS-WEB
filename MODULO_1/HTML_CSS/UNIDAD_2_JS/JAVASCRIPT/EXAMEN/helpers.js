@@ -1,3 +1,4 @@
+
 export const switchSection = (section) => {
     const sections = ['plates-section', 'menu-section', 'ofert-section'];
     sections.forEach(sec => {

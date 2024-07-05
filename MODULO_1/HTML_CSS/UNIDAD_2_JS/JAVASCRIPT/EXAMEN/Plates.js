@@ -109,8 +109,8 @@ class Plates {
         <td>${plate.description}</td>
         <td>${plate.price}</td>
         <td>
-          <button onclick="plates.editPlatePrompt(${plate.id})">Edit</button>
-          <button onclick="plates.deletePlate(${plate.id})">Delete</button>
+          <button onclick="plates.editPlatePrompt(${plate.id})">&#x270E;</button>
+          <button onclick="plates.deletePlate(${plate.id})">&#x2718;</button>
         </td>
       `;
       return row;
@@ -122,9 +122,10 @@ class Plates {
         <td><input type="checkbox" value="${plate.id}"></td>
         <td>${plate.id}</td>
         <td>${plate.title}</td>
+                <td>${plate.description}</td>
         <td>${plate.price}</td>
         <td>
-          <button onclick="plates.deleteFromMenu(${plate.id})">Delete</button>
+          <button onclick="plates.deleteFromMenu(${plate.id})">&#x2718;</button>
         </td>
       `;
       return row;
@@ -136,10 +137,10 @@ class Plates {
         <td><input type="checkbox" value="${plate.id}"></td>
         <td>${plate.id}</td>
         <td>${plate.title}</td>
+                <td>${plate.description}</td>
+
         <td>${plate.price}</td>
-        <td>
-          <button onclick="plates.deleteFromOffer(${plate.id})">Delete</button>
-        </td>
+
       `;
       return row;
     }
