@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management | Best Plates and Offers</title>
+    <meta name="description"
+        content="Discover the best plates and offers at our restaurant. Enjoy delicious meals and exclusive deals.">
+    <meta name="keywords" content="restaurant, plates, offers, menu, food, dining">
+    <meta name="author" content="Oksana">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <header>
+        <h1 id="user">Welcome to Restaurant, </h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="plates-link">Plates</a></li>
+                <li><a href="#" id="menu-link">Menu</a></li>
+                <li><a href="#" id="ofert-link">Ofert</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+
+        <section id="plates-section">
+            <h2>Add New Plate</h2>
+            <form id="add-plate-form">
+                <input type="text" id="plate-title" placeholder=" Title" required>
+                <input id="plate-description" placeholder=" Description" required>
+                <input type="number" id="plate-price" placeholder=" Price" required>
+                <button type="submit"> save </i>
+                </button>
+            </form>
+
+            <h2>Plates</h2>
+            <button id="add-to-menu-btn">Add to Menu</button>
+
+            <table id="tablePlates">
+                <thead>
+                    <tr>
+                        <th>&#9745;</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Details</th>
+                        <th>&euro;</th>
+                        <th>...</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyPlates">
+
+                </tbody>
+            </table>
+        </section>
+
+
+        <section id="menu-section" style="display:none;">
+            <h2>Menu</h2>
+            <button id="add-to-ofert-btn">Add to Ofert</button>
+
+            <table id="tableMenu">
+                <thead>
+                    <tr>
+                        <th>&#9745;</th>
+
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Details</th>
+
+                        <th>&euro;</th>
+                        <th>...</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyMenu">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="ofert-section" style="display:none;">
+            <h2>Ofert</h2>
+            <button id="delete-from-ofert-btn">Delete </button>
+
+            <table id="tableOfert">
+                <thead>
+                  <tr>
+                    <th>☑</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Details</th>
+                    <th>€</th>
+                  </tr>
+                </thead>
+                <tbody id="tBodyOffer"></tbody>
+              </table>
+              
+        </section>
+
+    </main>
+
+    <footer>&copy; 2024 Created with &#128151; by Oksana</footer>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

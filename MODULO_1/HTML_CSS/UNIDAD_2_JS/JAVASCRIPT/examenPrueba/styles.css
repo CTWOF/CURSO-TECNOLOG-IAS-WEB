@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(360deg, #e0d2dd 10%, #746486 100%);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+header {
+  flex-direction: row;
+  width: 100%;
+  background-color: rgba(208, 170, 170, 0.7);
+  padding: 10px 0;
+ 
+}
+main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #faf6f6;
+}
+footer {
+  width: 100%;
+  background-color: rgba(208, 170, 170, 0.729);
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #747773;
+}
+
+button {
+  padding: 15px 25px;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #4d425a;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #746486;
+
+  color: #fff;
+}
+
+form {
+  position: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
+  margin: 5px;
+}
+input {
+  padding: 15px 25px;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #c8b8dc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  text-transform: uppercase;
+}
+
+input:hover {
+  background-color: #fff;
+  color: #333;
+}
+table {
+  width: 80%;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #333;
+  margin-left: 1em;
+  border-radius: 4px;
+
+}
+
+th,
+td {
+  padding: 7px;
+  text-align: left;
+  border-bottom: 1px solid #eae6e6;
+}
+
+th {
+  background-color: #605270;
+  color: #fff;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 1px solid #605270;
+
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td button {
+  margin: 5px;
+  padding: 5px;
+  font-size: 15px;
+  max-width: 38px;
+  min-width: 38px;
+  color: #f36161;
+  background-color: #ddd;
+}
+
+td button:hover {
+  color: #f50606;
+  background-color: #ddd;
+}
