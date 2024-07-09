@@ -17,7 +17,7 @@ function replaceSentence() {
     let wordToChange = prompt('What do u want to change?');
     let newWord = prompt('Write New Word!:');
     if (wordToChange && newWord) {
-        let newStr = str.innerHTML.replace(wordToChange, `<span class="highlight">${newWord}</span>`);
+        let newStr = str.innerHTML.replace(wordToChange, `<span class="replaced">${newWord}</span>`);
         str.innerHTML = newStr;
     }
 }
