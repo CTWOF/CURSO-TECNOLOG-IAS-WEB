@@ -1,0 +1,14 @@
+{
+  "name": "examen",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "oksana",
+  "license": "ISC",
+  "description": "this is my js project for organize restaurants menu"
+  
+}
