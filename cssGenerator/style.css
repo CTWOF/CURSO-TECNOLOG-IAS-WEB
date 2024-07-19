@@ -1,0 +1,46 @@
+.layout {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "leftSide body rightSide"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+    height: 10vw;
+}
+
+.leftSide {
+    grid-area: leftSide;
+    background-color: blueviolet;
+    width: 15vw;
+}
+
+.body {
+    grid-area: body;
+    background-color: brown;
+}
+
+.rightSide {
+    grid-area: rightSide;
+    background-color: bisque;
+    width: 15vw;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(29, 125, 210);
+    height: 15vh;
+}
+@media (max-width: 768px)      {
+    .rightSide, .leftSide {
+        display: none;
+    }
+}
