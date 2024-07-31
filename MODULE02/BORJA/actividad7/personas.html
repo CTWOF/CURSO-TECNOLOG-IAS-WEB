@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="formulario.css">
+	<script src="index.js"></script>
+	<style>
+	.fila div {
+		width: 200px;
+		display: inline-block;
+		/* margin: 10px; */
+	}
+		.cabecera {
+			padding-left:10px;
+		}
+	</style>
+</head>
+<body>
+	<form action="personas.php" method="post">
+		<div class="fila cabecera">
+			<div>Nombre:</div><div>Apellido 1</div><div>Apellido 2</div>	 
+		</div>
+		<div class="fila">
+			<div> 
+				<input type="text" id="Nombre" name="personas[0][nombre]">
+			</div>
+			<div>
+				<input type="text" id="Ape1" name="personas[0][ape1]">
+			</div>
+			<div>
+				<input type="text" id="Ape2" name="personas[0][ape2]">
+			</div>
+		</div>
+		<div class="fila">
+			<div> 
+				<input type="text" id="Nombre" name="personas[1][nombre]">
+			</div>
+			<div>
+				<input type="text" id="Ape1" name="personas[1][ape1]">
+			</div>
+			<div>
+				<input type="text" id="Ape2" name="personas[1][ape2]">
+			</div>
+		</div>
+		<div class="fila">
+			<div> 
+				<input type="text" id="Nombre" name="personas[2][nombre]">
+			</div>
+			<div>
+				<input type="text" id="Ape1" name="personas[2][ape1]">
+			</div>
+			<div>
+				<input type="text" id="Ape2" name="personas[2][ape2]">
+			</div>
+		</div>
+		<div class="fila">
+			<div> 
+				<input type="text" id="Nombre" name="personas[3][nombre]">
+			</div>
+			<div>
+				<input type="text" id="Ape1" name="personas[3][ape1]">
+			</div>
+			<div>
+				<input type="text" id="Ape2" name="personas[3][ape2]">
+			</div>
+		</div>		
+		<input type="submit" value="Añadir persona">
+	</form>	
+</body>
+</html>

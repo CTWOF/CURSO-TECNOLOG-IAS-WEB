@@ -1,0 +1,4 @@
+A partir del ejemplo dado, crear un array llamado $coches que sea un array de coches. Es decir, el array contendrá la información de 3 o 4 coches,. De cada coche se espera  3 o 4 características (marca, modelo, color, matricula....).
+
+Mostrar un listado de todos los coches que contiene el array.
+

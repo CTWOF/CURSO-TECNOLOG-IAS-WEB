@@ -1,0 +1,6 @@
+Crear un formulario con campos múltiples y mostrar el resultado por pantalla de forma humana.
+.El formulario debe contener un listado de campos de texto múltiples, un radio button, un checkbox, y lo que queráis añadir.
+
+Pista y ejemplo:
+https://es.stackoverflow.com/questions/14295/enviar-un-
+arreglo-asociativo-multidimensional-mediante-el-uso-de-

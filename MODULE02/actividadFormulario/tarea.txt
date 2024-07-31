@@ -1,0 +1,9 @@
+Crear un formulario del expedientes de un alumnoscon campos múltiples y mostrar el resultado por pantalla de forma humana.
+El formulario debe contener los siguientes campos:
+Nombre, primer apellido y segundo apellido
+Actividades: nombre del ejercicio, nota y comentario (al menos 3 actividades)
+Actitud del alumno en clase (Buena, normal, mala)
+Idiomas que habla: (Catalan, Castellano, Frances e ingles)
+
+
+!!! Adjuntar los archivos en un zip e indicar la url donde esta realizado el ejercicio.
