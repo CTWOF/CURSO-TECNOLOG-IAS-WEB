@@ -1,5 +1,5 @@
 <?php
-require_once '../comun/libreria.php';
+require_once '../../comun/libreria.php';
 cabecera('Leer expedientes','');
 echo '<ul class="menu">';
 echo '<li><a href="controladores/anadirExpediente1Controlador.php">Añadir expediente</a></li>';
