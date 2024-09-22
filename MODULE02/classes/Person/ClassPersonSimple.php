@@ -23,7 +23,6 @@ echo $persona1->ape2.'<br>';
 echo $persona1->fechaNacimiento.'<br>';
 echo $persona1->genero.'<br>';
 
-// Separación de los objetos
 echo '<hr>';
 
 // Creamos el objeto $persona2 que es otra instancia de la clase Persona
